@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Finance Coach | Premium Financial Insights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">AI Finance Coach</div>
+            <div class="user-profile">
+                <span id="current-date">April 2024</span>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-label">Total Balance</span>
+                <span class="stat-value" id="total-balance">$0.00</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Monthly Spending</span>
+                <span class="stat-value" id="monthly-spending">$0.00</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Savings Rate</span>
+                <span class="stat-value" id="savings-rate">0%</span>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <!-- Spending Chart -->
+            <div class="card">
+                <h2>Spending by Category</h2>
+                <canvas id="spendingChart"></canvas>
+            </div>
+
+            <!-- AI Coach Chat -->
+            <div class="card chat-card">
+                <h2>AI Financial Coach</h2>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message ai">
+                        Hello! I'm your AI Finance Coach. I've analyzed your recent transactions. How can I help you reach your financial goals today?
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Ask about your spending or goals...">
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Recommended Goals</h2>
+            <div id="goals-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <!-- Goals will be populated here -->
+                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px; border-left: 4px solid var(--accent);">
+                    <h4 style="color: var(--accent)">Emergency Fund</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Save $500 more to cover 1 month of essential expenses.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px; border-left: 4px solid var(--primary);">
+                    <h4 style="color: var(--primary)">Reduce Dining</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">You spent $125 on food this month. Aim for < $100.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
